@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        font-family: cursive;
+        text-align: center;
+    }
+   .container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 10px auto;
+     gap: 10px;
+   }
+
+   .clr_ele{
+    width: 200px;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   button{
+    width: 90px;
+    height: 40px;
+    border: none;
+    margin-top: 40px;
+    background: gold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+   }
+
+   button:active{
+    box-shadow: 0 6px 3px rgba(0,0,0,0.5);
+   }
+
+</style>
+<body>
+    <h1>Random Color Generator</h1>
+    <div class="container">
+        <div class="clr_ele"></div>
+        <div class="clr_ele"></div>
+        <div class="clr_ele"></div>
+        <div class="clr_ele"></div>
+        <div class="clr_ele"></div>
+        <div class="clr_ele"></div>
+    </div>
+
+    <button>Generate</button>
+
+    <script>
+        let div = document.querySelectorAll(".clr_ele");
+        let butt = document.querySelector("button");
+
+        function pu(){
+          div.forEach((i) => {
+              i.style.background = clrGenerator();
+              i.innerText = clrGenerator();
+          })
+
+          function clrGenerator(){
+             let r = Math.floor(Math.random()*255);
+             let g = Math.floor(Math.random()*255);
+             let b = Math.floor(Math.random()*255);
+
+             let rgb = `rgb(${r}, ${g}, ${b})`;
+             return rgb;
+          }
+       }
+
+ butt.onclick = pu;
+    </script>
+</body>
+</html>

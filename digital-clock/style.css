@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: sans-serif;
+}
+.container{
+   height: 100%;
+   background: url('../images/lucas-calloch-P-yzuyWFEIk-unsplash.jpg');
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+}
+
+.d-clk{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+.clock{
+    display: flex;
+    background: rgba(130, 1, 130, 0.7);
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 90px;
+    border-radius: 7px;
+}
+
+.clock span:nth-child(1){
+    font-size: 30px;
+    font-weight: bold;
+}
